@@ -42,8 +42,7 @@ function checkAge() {
         }, 300);
     } else {
         showResultAge.style.backgroundColor = 'red';
-        clearTimeout(time);
-        var time = setTimeout(function() {
+        setTimeout(function() {
             showResultAge.style.backgroundColor = 'white';
             showResultAge.style.transition = 'all .7s';
 
@@ -58,13 +57,11 @@ function checkUser() {
     var corectValue = nameValue.slice(0, 5);
     if (corectValue !== 'user_') {
         showResultUser.style.backgroundColor = 'red';
-        clearTimeout(time);
-        var time = setTimeout(function() {
+        setTimeout(function() {
             showResultUser.style.backgroundColor = 'white';
             showResultUser.style.transition = 'all .7s';
 
         }, 1000);
-        //  alert('user name begin \'user_ +name\'');
     } else {
         setTimeout(function() {
             showResultUser.style.backgroundColor = "green";
@@ -76,8 +73,7 @@ function checkUser() {
 function showResultFalse() {
     var resultFalse = document.querySelector('input[name="date"]');
     resultFalse.style.backgroundColor = 'red';
-    clearTimeout(time);
-    var time = setTimeout(function() {
+   setTimeout(function() {
         resultFalse.style.backgroundColor = 'white';
         resultFalse.style.transition = 'all .7s';
 
